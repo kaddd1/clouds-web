@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root {
+    --main-color: #212131;
+}
+
+@mixin mainButton {
+    min-width: 176px;
+    font-size: 14px;
+    height: 51px;
+    background-color: #212131;
+    border: 1px solid #313140;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: font-size 0.3s, color 0.3s ease;
+}
+
+@mixin secondButton {
+    background-color: transparent;
+    border: 0;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.container {
+    width: 1600px;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    background: var(--main-color);
+    padding: 0 2rem 0 2rem;
+    height: 80px;
+    &__buttons {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(50px, auto));
+        grid-auto-flow: column;
+        grid-gap: 25px;
+        padding: 0 0 0 3rem;
+        button {
+            min-width: 50px;
+            font-size: 14px;
+            height: 16px;
+            background-color: transparent;
+            border: 0;
+            color: #AAAAAA;
+            cursor: pointer;
+            transition: font-size 0.3s, color 0.3s ease;
+            &:hover {
+                font-size: 16px; 
+                color: white;
+            }
+        }
+    }
+    &__logo {
+        margin-right: 0.5rem;
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__text {
+        color: #00B9E8;
+        font-weight: 700;
+    }
+    &__system-buttons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 220px;
+        margin-left: auto;
+        color: white;
+    }
+    &__sign-in {
+        width: 135px;
+        height: 35px;
+        background-color: #313140;
+        border: 1px solid #404054;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 14px;
+        color: white;
+        cursor: pointer;
+    }
+    &__language {
+        cursor: pointer;
+        font-weight: 400;
+    }
+}
+
+.introduction-section {
+    background-color: #171721;
+    padding: 3rem 0 0 0;
+
+    .flex-container {
+        display: flex;
+    }
+    
+    .introduction {
+        &__name {
+            color: #55FF55;
+        }
+        &__header {
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-top: 0.2rem;
+        }
+        &__text {
+            color: #AAAAAA;
+            margin-top: 0.6rem;
+            p {
+                margin-top: 0.4rem;
+            }
+        }
+        &__buttons {
+            margin-top: 0.8rem;
+            button {
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+        &__main-button {
+            @include mainButton;
+        }
+        &__second-button {
+            @include secondButton;
+        }
+        &__img {
+            margin-left: auto;
+            width: 768px;
+            
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+            }
+        }
+    }
+}
+
+.solution-section {
+    background-color: #171721;
+    padding-top: 5rem;
+    .flex-container {
+        display: flex;
+    }
+    .solution {
+        margin-left: auto;
+        &__name {
+            color: #55FF55;
+        }
+        &__header {
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-top: 0.2rem;
+        }
+        &__text {
+            color: #AAAAAA;
+            margin-top: 0.6rem;
+            p {
+                margin-top: 0.4rem;
+            }
+        }
+        &__icons {
+            margin-top: 1.7rem;
+            &__text {
+                color: #FFFFFF;
+                font-size: 16px;
+            }
+            &__element {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                justify-content: center;
+                padding: 0 0 0 0.7rem;
+                background-color: var(--main-color);
+                border: 1px solid #313140;
+                border-radius: 4px;
+                width: 368px;
+                height: 79px;
+                &__header {
+                    color: white;
+                    font-weight: 500;
+                    &-img {
+                        display: flex;
+                        align-items: center;
+                    }
+                    &-name {
+                        margin-left: 0.3rem;
+                    }
+                }
+                &__text {
+                    margin-top: 0.2rem;
+                    color: #AAAAAA;
+                }
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(100px, 368px));
+                margin-top: 1rem;
+                column-gap: 2rem;
+                row-gap: 1rem;
+            }
+        }
+        &__more {
+            margin-top: 0.8rem;
+            color: #AAAAAA;
+        }
+    }
+}
+
+.partnership-section {
+    background-color: #171721;
+    padding-top: 5rem;
+    .partnership {
+        width: 768px;
+        &__header {
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-top: 0.2rem;
+        }
+        &__name {
+            color: #55FF55;
+        }
+        &__text {
+            margin-top: 0.5rem;
+            color: #AAAAAA;
+        }
+        &__buttons {
+            button {
+                margin-top: 0.8rem;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+        &__main-button {
+            @include mainButton;
+        }
+        &__second-button {
+            @include secondButton;
+        }
+        &__img {
+            width: 768px;
+            margin-left: auto;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+            }
+        }
+    }
+}
+
+.application-section {
+    background-color: #171721;
+    padding-top: 5rem; 
+    padding-bottom: 5rem;
+    .application {
+        width: 768px;
+        margin-left: auto;
+        &__header {
+            font-weight: 700;
+            font-size: 24px;
+            color: #FFFFFF;
+            margin-top: 0.2rem;
+        }
+        &__name {
+            color: #55FF55;
+        }
+        &__text {
+            margin-top: 0.5rem;
+            color: #AAAAAA;
+        }
+        &__buttons {
+            button {
+                margin-top: 0.8rem;
+                font-size: 16px;
+                font-weight: 400;
+                color: white;
+            }
+        }
+        &__main-button {
+            @include mainButton;
+        }
+        &__second-button {
+            @include secondButton;
+        }
+        &__img {
+            width: 768px;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: none;
+            }
+        }
+    }
+}

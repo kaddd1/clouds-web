@@ -1,0 +1,319 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+:root {
+  --main-color: #212131;
+}
+
+.container {
+  width: 1600px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  background: var(--main-color);
+  padding: 0 2rem 0 2rem;
+  height: 80px;
+}
+.navigation__buttons {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(50px, auto));
+  grid-auto-flow: column;
+  grid-gap: 25px;
+  padding: 0 0 0 3rem;
+}
+.navigation__buttons button {
+  min-width: 50px;
+  font-size: 14px;
+  height: 16px;
+  background-color: transparent;
+  border: 0;
+  color: #AAAAAA;
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s ease;
+}
+.navigation__buttons button:hover {
+  font-size: 16px;
+  color: white;
+}
+.navigation__logo {
+  margin-right: 0.5rem;
+}
+.navigation__name {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.navigation__text {
+  color: #00B9E8;
+  font-weight: 700;
+}
+.navigation__system-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  margin-left: auto;
+  color: white;
+}
+.navigation__sign-in {
+  width: 135px;
+  height: 35px;
+  background-color: #313140;
+  border: 1px solid #404054;
+  border-radius: 4px;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  cursor: pointer;
+}
+.navigation__language {
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.introduction-section {
+  background-color: #171721;
+  padding: 3rem 0 0 0;
+}
+.introduction-section .flex-container {
+  display: flex;
+}
+.introduction-section .introduction__name {
+  color: #55FF55;
+}
+.introduction-section .introduction__header {
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 0.2rem;
+}
+.introduction-section .introduction__text {
+  color: #AAAAAA;
+  margin-top: 0.6rem;
+}
+.introduction-section .introduction__text p {
+  margin-top: 0.4rem;
+}
+.introduction-section .introduction__buttons {
+  margin-top: 0.8rem;
+}
+.introduction-section .introduction__buttons button {
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.introduction-section .introduction__main-button {
+  min-width: 176px;
+  font-size: 14px;
+  height: 51px;
+  background-color: #212131;
+  border: 1px solid #313140;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s ease;
+}
+.introduction-section .introduction__second-button {
+  background-color: transparent;
+  border: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.introduction-section .introduction__img {
+  margin-left: auto;
+  width: 768px;
+}
+.introduction-section .introduction__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+
+.solution-section {
+  background-color: #171721;
+  padding-top: 5rem;
+}
+.solution-section .flex-container {
+  display: flex;
+}
+.solution-section .solution {
+  margin-left: auto;
+}
+.solution-section .solution__name {
+  color: #55FF55;
+}
+.solution-section .solution__header {
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 0.2rem;
+}
+.solution-section .solution__text {
+  color: #AAAAAA;
+  margin-top: 0.6rem;
+}
+.solution-section .solution__text p {
+  margin-top: 0.4rem;
+}
+.solution-section .solution__icons {
+  margin-top: 1.7rem;
+}
+.solution-section .solution__icons__text {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+.solution-section .solution__icons__element {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 0 0 0.7rem;
+  background-color: var(--main-color);
+  border: 1px solid #313140;
+  border-radius: 4px;
+  width: 368px;
+  height: 79px;
+}
+.solution-section .solution__icons__element__header {
+  color: white;
+  font-weight: 500;
+}
+.solution-section .solution__icons__element__header-img {
+  display: flex;
+  align-items: center;
+}
+.solution-section .solution__icons__element__header-name {
+  margin-left: 0.3rem;
+}
+.solution-section .solution__icons__element__text {
+  margin-top: 0.2rem;
+  color: #AAAAAA;
+}
+.solution-section .solution__icons .grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 368px));
+  margin-top: 1rem;
+  column-gap: 2rem;
+  row-gap: 1rem;
+}
+.solution-section .solution__more {
+  margin-top: 0.8rem;
+  color: #AAAAAA;
+}
+
+.partnership-section {
+  background-color: #171721;
+  padding-top: 5rem;
+}
+.partnership-section .partnership {
+  width: 768px;
+}
+.partnership-section .partnership__header {
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 0.2rem;
+}
+.partnership-section .partnership__name {
+  color: #55FF55;
+}
+.partnership-section .partnership__text {
+  margin-top: 0.5rem;
+  color: #AAAAAA;
+}
+.partnership-section .partnership__buttons button {
+  margin-top: 0.8rem;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.partnership-section .partnership__main-button {
+  min-width: 176px;
+  font-size: 14px;
+  height: 51px;
+  background-color: #212131;
+  border: 1px solid #313140;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s ease;
+}
+.partnership-section .partnership__second-button {
+  background-color: transparent;
+  border: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.partnership-section .partnership__img {
+  width: 768px;
+  margin-left: auto;
+}
+.partnership-section .partnership__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+
+.application-section {
+  background-color: #171721;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+.application-section .application {
+  width: 768px;
+  margin-left: auto;
+}
+.application-section .application__header {
+  font-weight: 700;
+  font-size: 24px;
+  color: #FFFFFF;
+  margin-top: 0.2rem;
+}
+.application-section .application__name {
+  color: #55FF55;
+}
+.application-section .application__text {
+  margin-top: 0.5rem;
+  color: #AAAAAA;
+}
+.application-section .application__buttons button {
+  margin-top: 0.8rem;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+}
+.application-section .application__main-button {
+  min-width: 176px;
+  font-size: 14px;
+  height: 51px;
+  background-color: #212131;
+  border: 1px solid #313140;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: font-size 0.3s, color 0.3s ease;
+}
+.application-section .application__second-button {
+  background-color: transparent;
+  border: 0;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+.application-section .application__img {
+  width: 768px;
+}
+.application-section .application__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+}
+
+/*# sourceMappingURL=style.css.map */
